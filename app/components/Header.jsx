@@ -140,7 +140,7 @@ export default function Header() {
                 e.target.style.backgroundColor = "transparent";
               }}
             >
-              Book a Session
+              Free Intro Call
             </a>
           </div>
         </nav>

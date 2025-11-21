@@ -12,8 +12,8 @@ export default function PhilosophySection() {
     <section id="philosophy" className="mt-20 lg:mt-28">
       {/* FULL-WIDTH WRAPPER (not absolute) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#f7ebe3]">
-        <div className="mx-auto max-w-7xl px-6 py-14">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
+        <div className="mx-auto max-w-7xl md:px-6 py-14">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-start px-6">
             {/* Left column: philosophy text */}
             <div>
               <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">

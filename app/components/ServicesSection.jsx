@@ -15,7 +15,7 @@ export default function ServicesSection() {
       {/* FULL-WIDTH BACKGROUND */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#f7ebe3]">
         {/* INNER CONTENT WRAPPER */}
-        <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
           {/* The rounded card inside */}
           <div className="rounded-3xl border border-[#f0ddcf] bg-[#fff4ec] px-5 py-8 md:px-8 md:py-10">
             {/* Header + intro */}

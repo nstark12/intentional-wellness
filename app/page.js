@@ -10,7 +10,7 @@ import TestimonialSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fdf6f0] text-[#2b211c] mx-auto max-w-7xl px-4 sm:px-12 pt-0 pb-16">
+    <main className="min-h-screen bg-[#fdf6f0] text-[#2b211c] mx-auto max-w-7xl px-4 sm:px-12 pt-0 pb-8">
       <div>
         <HeroSection />
         <PhilosophySection />
