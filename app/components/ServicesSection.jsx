@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Utensils, HeartPulse, Moon, Calendar } from "lucide-react";
 import ServiceCard from "./ServiceCard";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function ServicesSection() {
   return (
@@ -18,7 +25,9 @@ export default function ServicesSection() {
                   Services
                 </p>
 
-                <h3 className="mt-1 text-2xl md:text-3xl font-semibold tracking-tight text-[#2b211c]">
+                <h3
+                  className={`${abhaya.className} mt-1 text-3xl md:text-4xl font-semibold tracking-tight text-[#2b211c]`}
+                >
                   Personalized support for your whole self.
                 </h3>
 

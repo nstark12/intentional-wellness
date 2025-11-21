@@ -1,4 +1,11 @@
 import { Brain, HeartPulse, Sparkles, Leaf } from "lucide-react";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function PhilosophySection() {
   return (
@@ -13,7 +20,9 @@ export default function PhilosophySection() {
                 Philosophy
               </p>
 
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#2b211c]">
+              <h3
+                className={`${abhaya.className} mt-2 text-3xl font-semibold tracking-tight text-[#2b211c]`}
+              >
                 Health doesn&apos;t happen by accident — it happens through
                 intention.
               </h3>

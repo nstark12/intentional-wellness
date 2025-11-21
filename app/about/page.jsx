@@ -1,6 +1,13 @@
 // app/about/page.jsx
 import Image from "next/image";
 import { HeartPulse, Sparkles, Coffee, Leaf } from "lucide-react";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function AboutPage() {
   return (
@@ -10,7 +17,9 @@ export default function AboutPage() {
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
           About Janelle
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#2b211c] sm:text-4xl">
+        <h1
+          className={`${abhaya.className} mt-2 text-4xl md:text-5xl font-semibold tracking-tight text-[#2b211c]`}
+        >
           A nurse with a heart for whole person healing.
         </h1>
 

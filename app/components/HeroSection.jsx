@@ -1,6 +1,13 @@
 // components/sections/HeroSection.jsx
 
 import WellnessIconRow from "./WellnessIconRow";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function HeroSection() {
   return (
@@ -26,9 +33,12 @@ export default function HeroSection() {
             </div>
 
             {/* Main heading */}
-            <h1 className="mt-4 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white drop-shadow-xl">
-              Welcome to a space of true wellness
-            </h1>
+
+            <div className="mt-4 max-w-4xl text-2xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white drop-shadow-xl">
+              <h1 className={abhaya.className}>
+                Welcome to a space of true wellness
+              </h1>
+            </div>
 
             {/* Primary subheading */}
             <p className="mt-4 max-w-2xl text-sm md:text-base lg:text-lg leading-relaxed text-white/90 drop-shadow-md">
@@ -70,7 +80,9 @@ export default function HeroSection() {
             Intentional Wellness, with a nurse&apos;s touch
           </p>
 
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+          <h2
+            className={`${abhaya.className} text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl`}
+          >
             Feel supported, heard, and{" "}
             <span className="underline decoration-[#f7d6d0] decoration-[0.35em] underline-offset-[0.35em]">
               deeply cared for

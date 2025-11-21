@@ -1,4 +1,10 @@
-// components/sections/VisualWellnessSection.jsx
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function VisualWellnessSection() {
   return (
@@ -7,7 +13,9 @@ export default function VisualWellnessSection() {
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
           In Practice
         </p>
-        <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#2b211c]">
+        <h3
+          className={`${abhaya.className} mt-2 text-3xl font-semibold tracking-tight text-[#2b211c]`}
+        >
           Little moments of intentional wellness.
         </h3>
         <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c] max-w-xl">

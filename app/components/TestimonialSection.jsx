@@ -1,5 +1,12 @@
 // components/sections/TestimonialSection.jsx
 import { Star } from "lucide-react";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function TestimonialSection() {
   return (
@@ -8,7 +15,9 @@ export default function TestimonialSection() {
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
           Testimonials
         </p>
-        <h3 className="mt-2 text-2xl md:text-3xl font-semibold tracking-tight text-[#2b211c]">
+        <h3
+          className={`${abhaya.className} mt-2 text-3xl md:text-4xl font-semibold tracking-tight text-[#2b211c]`}
+        >
           What clients are saying.
         </h3>
         <p className="mt-3 text-sm text-[#5d4a3c]">

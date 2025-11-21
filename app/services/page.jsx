@@ -8,6 +8,13 @@ import {
   Activity,
   ClipboardList,
 } from "lucide-react";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function ServicesPage() {
   return (
@@ -29,7 +36,9 @@ export default function ServicesPage() {
             Your Wellness, Personalized
           </p>
 
-          <h1 className="mt-2 text-white text-3xl md:text-4xl font-semibold tracking-tight">
+          <h1
+            className={`${abhaya.className} mt-2 text-white text-5xl md:text-6xl font-semibold tracking-tight`}
+          >
             Services
           </h1>
 
@@ -53,7 +62,9 @@ export default function ServicesPage() {
           <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
             Services
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#2b211c] sm:text-4xl">
+          <h1
+            className={`${abhaya.className} mt-2 text-4xl font-semibold tracking-tight text-[#2b211c] sm:text-4xl`}
+          >
             Services offered at Intentional Wellness.
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c] max-w-2xl">

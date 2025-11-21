@@ -1,5 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Abhaya_Libre } from "next/font/google";
+
+const abhaya = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choose what you need
+  display: "swap",
+});
 
 export default function AboutSection() {
   return (
@@ -11,7 +18,9 @@ export default function AboutSection() {
             About
           </p>
 
-          <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#2b211c]">
+          <h3
+            className={`${abhaya.className} mt-2 text-3xl font-semibold tracking-tight text-[#2b211c]`}
+          >
             Meet Janelle Lauersdorf, BSN, RN
           </h3>
 
