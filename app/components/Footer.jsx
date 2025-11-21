@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,9 +9,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-3">
         {/* Column 1 — Brand */}
         <div className="space-y-3">
-          <p className="text-sm font-semibold text-[#2b211c]">
-            Intentional Wellness
-          </p>
+          <Image
+            src={"/logo.webp"}
+            height={100}
+            width={200}
+            alt="Intentional wellness logo"
+          />
 
           <p className="leading-relaxed max-w-sm">
             Nurse-led holistic care rooted in compassion, connection, and

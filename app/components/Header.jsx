@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,22 +29,16 @@ export default function Header() {
       className="border-b backdrop-blur bg-[#fdf6f0]/95"
       style={{ borderColor }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         {/* Brand */}
         <Link href={"/"}>
-          <div className="flex flex-col">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase"
-              style={{ color: "#a3836c" }}
-            >
-              Intentional Wellness
-            </span>
-            <span
-              className="text-sm font-semibold tracking-tight"
-              style={{ color: darkBrown }}
-            >
-              Nurse-Led Holistic Care
-            </span>
+          <div className="flex">
+            <Image
+              src={"/logo.webp"}
+              height={100}
+              width={200}
+              alt="Intentional wellness logo"
+            />
           </div>
         </Link>
 

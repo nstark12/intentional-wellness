@@ -1,81 +1,55 @@
 // app/about/page.jsx
+import Image from "next/image";
 import { HeartPulse, Sparkles, Coffee, Leaf } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-12 pt-4 pb-16 lg:pt-16">
-      {/* Hero */}
-      <section className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
-        <div>
-          <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
-            About Janelle
+    <div className="mx-auto max-w-5xl px-4 sm:px-8 pt-8 pb-16 lg:pt-16">
+      {/* Hero – centered intro */}
+      <section className="text-center max-w-2xl mx-auto">
+        <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
+          About Janelle
+        </p>
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#2b211c] sm:text-4xl">
+          A nurse with a heart for whole person healing.
+        </h1>
+
+        <div className="mt-4 flex flex-wrap justify-center gap-3 text-[11px] text-[#5d4a3c]">
+          <IconPill icon={HeartPulse} label="27 years in healthcare" />
+          <IconPill icon={Sparkles} label="Functional medicine focus" />
+          <IconPill icon={Leaf} label="Mind body spirit centered" />
+        </div>
+
+        <p className="mt-6 text-sm leading-relaxed text-[#5d4a3c]">
+          With over 27 years of experience in health care, my passion has always
+          been helping others heal, grow, and discover what is possible for
+          their health. My background is diverse, which has given me a deep
+          understanding of the many layers that contribute to a person&apos;s
+          overall well-being.
+        </p>
+      </section>
+
+      {/* Main story + image column */}
+      <section className="mt-10 lg:mt-14 flex flex-col lg:flex-row gap-10 lg:gap-12 lg:items-start">
+        {/* Story text */}
+        <div className="lg:flex-3 space-y-4 text-sm leading-relaxed text-[#5d4a3c]">
+          <p>
+            No matter which role I was in over the years, the most rewarding
+            part has always been seeing someone feel better, learn something
+            new, or take a meaningful step forward in their wellness journey.
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-[#2b211c] sm:text-4xl">
-            A nurse with a heart for whole person healing.
-          </h1>
-
-          {/* Icon row */}
-          <div className="mt-4 flex flex-wrap gap-3 text-[11px] text-[#5d4a3c]">
-            <IconPill icon={HeartPulse} label="27 years in healthcare" />
-            <IconPill icon={Sparkles} label="Functional medicine focus" />
-            <IconPill icon={Leaf} label="Mind body spirit centered" />
-          </div>
-
-          <p className="mt-6 text-sm leading-relaxed text-[#5d4a3c]">
-            With over 27 years of experience in health care, my passion has
-            always been helping others heal, grow, and discover what is possible
-            for their health. My background is diverse, which has given me a
-            deep understanding of the many layers that contribute to a
-            person&apos;s overall well-being. No matter which role I was in, the
-            most rewarding part has always been seeing someone feel better,
-            learn something new, or take a meaningful step forward in their
-            wellness journey.
-          </p>
-
-          <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c]">
+          <p>
             For the past three years, I have been working in functional medicine
             alongside a nurse practitioner, and it has felt like the work I was
             always meant to do. Functional medicine opened the door for me to
-            look at health through an individualized, root-cause, whole person
+            look at health through an individualized, root-cause, whole-person
             lens that aligns with my belief that healing is multifaceted and
             deeply personal.
           </p>
-        </div>
-
-        {/* Image + small card */}
-        <div className="space-y-4">
-          <div className="overflow-hidden rounded-3xl border border-[#e5d5c9] bg-[#fff9f4]">
-            <div className="relative h-56 md:h-72">
-              <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-                alt="Cozy office with warm light and comfortable chair"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-[#e5d5c9] bg-[#fff9f4] p-5">
-            <p className="text-sm italic leading-relaxed text-[#7a6250]">
-              “Supporting others in transforming their health physically,
-              mentally, emotionally, and spiritually brings me joy, purpose, and
-              alignment.”
-            </p>
-            <p className="mt-3 text-xs font-medium text-[#5d4a3c]">
-              Janelle Lauersdorf, BSN, RN
-              <br />
-              Founder, Intentional Wellness
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Personal life + personality */}
-      <section className="mt-16 grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
-        <div>
-          <h2 className="text-xl font-semibold text-[#2b211c]">
+          <p className="pt-2 text-[#2b211c] font-semibold">
             Beyond the clinic.
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c]">
+          </p>
+          <p>
             I have been married to my husband for 21 years, and together we are
             raising four wonderful daughters, ranging in age from 20 to 11. As
             my children continue to grow and gain independence, I have felt
@@ -83,7 +57,7 @@ export default function AboutPage() {
             and independent way. This work genuinely fills my cup and is
             something I know I will continue doing for many years to come.
           </p>
-          <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c]">
+          <p>
             In my spare time, I love all things food, from meal prepping to
             cooking and trying new recipes. I love being outdoors in nature,
             whether it is a simple walk or exploring somewhere new. I treasure
@@ -93,8 +67,24 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Cute icons / interests */}
-        <div className="grid gap-4 sm:grid-cols-2">
+        {/* Image column – stacked, closer to text */}
+        <div className="lg:flex-2 flex flex-col gap-6 max-w-sm mx-auto">
+          {/* Janelle portrait */}
+          <div className="relative aspect-3/4 w-full rounded-3xl overflow-hidden border border-[#dbc2ac] bg-[#fff9f4] shadow-md shadow-[#e6d2c2]">
+            <Image
+              src="/about/girls.webp"
+              alt="Portrait of Janelle Lauersdorf and daughters"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Interests */}
+      <section className="mt-16">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           <InterestCard
             icon={Coffee}
             title="Coffee & connection"
