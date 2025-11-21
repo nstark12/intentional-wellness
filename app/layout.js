@@ -1,7 +1,7 @@
 // app/layout.jsx
 import "./globals.css";
-import Header from "./compnents/Header";
-import Footer from "./compnents/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Intentional Wellness",
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen bg-[#fdf6f0] text-[#2b211c]">
         <Header />
-        <main className="mx-auto max-w-7xl px-4 pt-0 pb-10 ">{children}</main>
+        <main className="min-h-screen flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>

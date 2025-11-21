@@ -8,36 +8,52 @@ export default function HeroSection() {
       {/* FULL-BLEED IMAGE (breaks out of max-width container) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
         <div className="relative h-[55vh] md:h-[65vh] lg:h-[70vh] overflow-hidden">
+          {/* Background image */}
           <img
-            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1950&q=80"
+            src="/hero.webp"
             alt="Cozy wellness office interior with soft chair and blanket"
             className="h-full w-full object-cover"
           />
 
-          {/* soft dark overlay for readability */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            {/* Heading WITHOUT the pink underline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white drop-shadow-lg tracking-tight">
-              Welcome to a Space of True Wellness
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/50 lg:bg-black/30"></div>
+
+          {/* TEXT CONTENT */}
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
+            {/* Overline pill */}
+            <div className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-white/85">
+              Nurse-led holistic care
+            </div>
+
+            {/* Main heading */}
+            <h1 className="mt-4 max-w-3xl text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white drop-shadow-xl">
+              Welcome to a space of true wellness
             </h1>
 
-            <p className="mt-4 max-w-2xl text-sm md:text-base text-white/85 leading-relaxed drop-shadow-lg">
-              Nurse-led support rooted in compassion, intention, and
-              understanding the full picture of your health.
+            {/* Primary subheading */}
+            <p className="mt-4 max-w-2xl text-sm md:text-base lg:text-lg leading-relaxed text-white/90 drop-shadow-md">
+              Compassionate, intention-led support that looks at the full
+              picture of your health, not just one symptom or moment in time.
             </p>
 
-            {/* CTA Button Block */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            {/* Free intro call line */}
+            <p className="mt-3 max-w-lg text-xs md:text-sm lg:text-base leading-relaxed text-white/85">
+              Begin with a free 15 minute intro call to explore your goals and
+              see if this support feels right for you.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="#schedule"
-                className="rounded-full bg-[#f7d6d0] px-8 py-3 text-sm font-semibold tracking-wide text-[#2b211c] shadow-lg hover:bg-[#f4c5c0] transition-all"
+                className="rounded-full bg-[#f7d6d0] px-8 py-3 text-sm font-semibold tracking-wide text-[#2b211c] shadow-lg transition-all hover:bg-[#f4c5c0]"
               >
-                Book a Session
+                Free Intro Call
               </a>
 
               <a
                 href="#services"
-                className="rounded-full bg-white/70 backdrop-blur px-8 py-3 text-sm font-medium text-[#2b211c] shadow hover:bg-white/90 transition-all"
+                className="rounded-full bg-white/75 px-8 py-3 text-sm font-medium text-[#2b211c] shadow backdrop-blur-sm transition-all hover:bg-white"
               >
                 Explore Services
               </a>
@@ -73,10 +89,10 @@ export default function HeroSection() {
               href="#schedule"
               className="rounded-full bg-[#f7d6d0] px-6 py-2.5 text-sm font-semibold tracking-wide text-[#2b211c] shadow-sm hover:bg-[#f4c5c0]"
             >
-              Book a Session
+              Free Intro Call
             </a>
             <a
-              href="#services"
+              href="/services"
               className="text-sm font-medium text-[#5d4a3c] underline-offset-4 hover:underline"
             >
               Explore Services

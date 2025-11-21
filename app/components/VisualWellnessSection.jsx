@@ -23,7 +23,7 @@ export default function VisualWellnessSection() {
         <div className="group overflow-hidden rounded-3xl border border-[#e5d5c9] bg-[#fff9f4]">
           <div className="relative h-60 md:h-72 lg:h-80">
             <img
-              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
+              src="/food-hero.webp"
               alt="Balanced meal in a cozy setting"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -42,7 +42,7 @@ export default function VisualWellnessSection() {
         <div className="group overflow-hidden rounded-3xl border border-[#e5d5c9] bg-[#fff9f4]">
           <div className="relative h-60 md:h-72 lg:h-80">
             <img
-              src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80"
+              src="/reflect.webp"
               alt="Cozy journaling reflection moment"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -61,8 +61,8 @@ export default function VisualWellnessSection() {
         <div className="group overflow-hidden rounded-3xl border border-[#e5d5c9] bg-[#fff9f4]">
           <div className="relative h-60 md:h-72 lg:h-80">
             <img
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
-              alt="Restorative nature path through the trees"
+              src="/restore.webp"
+              alt="Restorative nature time"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +14,13 @@ export default function Header() {
   const borderColor = "#d1b59a";
 
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#process", label: "How it Works" },
-    { href: "#contact", label: "Contact" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "About" },
+    {
+      href: "https://us.fullscript.com/welcome/jlauersdorf",
+      label: "Supplements",
+    },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -26,20 +30,22 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         {/* Brand */}
-        <div className="flex flex-col">
-          <span
-            className="text-xs font-medium tracking-[0.2em] uppercase"
-            style={{ color: "#a3836c" }}
-          >
-            Intentional Wellness
-          </span>
-          <span
-            className="text-sm font-semibold tracking-tight"
-            style={{ color: darkBrown }}
-          >
-            Nurse-Led Holistic Care
-          </span>
-        </div>
+        <Link href={"/"}>
+          <div className="flex flex-col">
+            <span
+              className="text-xs font-medium tracking-[0.2em] uppercase"
+              style={{ color: "#a3836c" }}
+            >
+              Intentional Wellness
+            </span>
+            <span
+              className="text-sm font-semibold tracking-tight"
+              style={{ color: darkBrown }}
+            >
+              Nurse-Led Holistic Care
+            </span>
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav
@@ -79,7 +85,7 @@ export default function Header() {
               e.target.style.backgroundColor = "transparent";
             }}
           >
-            Book a Session
+            Free Intro Call
           </a>
         </nav>
 
