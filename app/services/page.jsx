@@ -94,7 +94,7 @@ export default function ServicesPage() {
               For local clients, support can include trying new foods together,
               cooking sessions, meal prep help, and in-home visits for kitchen
               organization or nutrition coaching. For distance clients, these
-              services can be offered virtually through Zoom.
+              services can be offered virtually through Google Meet.
             </p>
           </ServiceCard>
 
