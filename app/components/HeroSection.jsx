@@ -84,11 +84,7 @@ export default function HeroSection() {
           <h2
             className={`${abhaya.className} text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl`}
           >
-            Feel supported, heard, and{" "}
-            <span className="underline decoration-[#f7d6d0] decoration-[0.35em] underline-offset-[0.35em]">
-              deeply cared for
-            </span>
-            .
+            Feel supported, heard, and <span>deeply cared for</span>.
           </h2>
 
           <p className="max-w-xl text-base leading-relaxed text-[#5d4a3c]">
