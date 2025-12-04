@@ -80,8 +80,8 @@ export default function AboutPage() {
         <div className="lg:flex-2 flex flex-col gap-6 w-full lg:w-auto">
           <div className="relative aspect-3/4 w-full min-h-80 rounded-3xl overflow-hidden border border-[#dbc2ac] bg-[#fff9f4] shadow-md shadow-[#e6d2c2]">
             <Image
-              src="/about/girls.webp"
-              alt="Portrait of Janelle Lauersdorf and daughters"
+              src="/about/family3.webp"
+              alt="Portrait of Janelle Lauersdorf and family"
               fill
               className="object-cover"
               priority
