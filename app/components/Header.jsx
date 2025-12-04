@@ -67,8 +67,9 @@ export default function Header() {
           ))}
 
           <a
-            href="#schedule"
+            href="https://calendly.com/janelle-intentionalwellness"
             className="rounded-full px-4 py-2 text-xs font-medium uppercase transition-all duration-200"
+            target="_blank"
             style={{
               border: `1px solid ${borderColor}`,
               color: darkBrown,
@@ -126,9 +127,10 @@ export default function Header() {
             ))}
 
             <a
-              href="#schedule"
+              href="https://calendly.com/janelle-intentionalwellnesse"
               onClick={closeMenu}
               className="mt-2 px-4 py-2 rounded-full text-xs font-semibold uppercase text-center transition-all duration-200"
+              target="_blank"
               style={{
                 border: `1px solid ${borderColor}`,
                 color: darkBrown,

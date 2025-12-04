@@ -55,14 +55,15 @@ export default function HeroSection() {
             {/* CTA buttons */}
             <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
               <a
-                href="#schedule"
+                href="https://calendly.com/janelle-intentionalwellness"
                 className="rounded-full bg-[#f7d6d0] px-8 py-3 text-sm font-semibold tracking-wide text-[#2b211c] shadow-lg transition-all hover:bg-[#f4c5c0]"
+                target="_blank"
               >
                 Free Intro Call
               </a>
 
               <a
-                href="#services"
+                href="/services"
                 className="rounded-full bg-white/75 px-8 py-3 text-sm font-medium text-[#2b211c] shadow backdrop-blur-sm transition-all hover:bg-white"
               >
                 Explore Services
@@ -98,8 +99,9 @@ export default function HeroSection() {
 
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="#schedule"
+              href="https://calendly.com/janelle-intentionalwellness"
               className="rounded-full bg-[#f7d6d0] px-6 py-2.5 text-sm font-semibold tracking-wide text-[#2b211c] shadow-sm hover:bg-[#f4c5c0]"
+              target="_blank"
             >
               Free Intro Call
             </a>

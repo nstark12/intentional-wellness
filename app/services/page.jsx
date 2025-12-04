@@ -48,8 +48,9 @@ export default function ServicesPage() {
           </p>
 
           <a
-            href="#"
+            href="https://calendly.com/janelle-intentionalwellness"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-white/90 px-6 py-2.5 text-sm font-semibold text-[#2b211c] shadow-md backdrop-blur-sm transition hover:bg-white"
+            target="_blank"
           >
             Book a Free 15 Minute Intro Call
           </a>

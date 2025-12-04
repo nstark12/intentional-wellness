@@ -77,8 +77,9 @@ export default function ProcessSection() {
               </p>
 
               <a
-                href="#"
+                href="https://calendly.com/janelle-intentionalwellness"
                 className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#f7d6d0] px-4 py-2.5 text-xs font-semibold tracking-wide text-[#2b211c] hover:bg-[#f4c5c0]"
+                target="_blank"
               >
                 Open scheduling
               </a>

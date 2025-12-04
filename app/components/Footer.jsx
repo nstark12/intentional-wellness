@@ -40,10 +40,15 @@ export default function Footer() {
             <Link
               href="https://us.fullscript.com/welcome/jlauersdorf"
               className="hover:underline"
+              target="_blank"
             >
               Supplements
             </Link>
-            <Link href="/#schedule" className="hover:underline">
+            <Link
+              href="https://calendly.com/janelle-intentionalwellness"
+              className="hover:underline"
+              target="_blank"
+            >
               Free Intro Call
             </Link>
             <Link href="/contact" className="hover:underline">

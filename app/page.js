@@ -13,9 +13,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#fdf6f0] text-[#2b211c] mx-auto max-w-7xl px-4 sm:px-12 pt-0 pb-8">
       <div>
         <HeroSection />
-        <PhilosophySection />
-        <VisualWellnessSection />
         <ServicesSection />
+        <VisualWellnessSection />
+        <PhilosophySection />
         <AboutSection />
         <ProcessSection />
         <TestimonialSection />
