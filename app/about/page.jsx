@@ -76,10 +76,9 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Image column – stacked, closer to text */}
-        <div className="lg:flex-2 flex flex-col gap-6 max-w-sm mx-auto">
-          {/* Janelle portrait */}
-          <div className="relative aspect-3/4 w-full rounded-3xl overflow-hidden border border-[#dbc2ac] bg-[#fff9f4] shadow-md shadow-[#e6d2c2]">
+        {/* Image column – always visible */}
+        <div className="lg:flex-2 flex flex-col gap-6 w-full lg:w-auto">
+          <div className="relative aspect-3/4 w-full min-h-80 rounded-3xl overflow-hidden border border-[#dbc2ac] bg-[#fff9f4] shadow-md shadow-[#e6d2c2]">
             <Image
               src="/about/girls.webp"
               alt="Portrait of Janelle Lauersdorf and daughters"

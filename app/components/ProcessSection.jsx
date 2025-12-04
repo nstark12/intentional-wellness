@@ -72,8 +72,7 @@ export default function ProcessSection() {
 
               <p className="mt-2 text-xs leading-relaxed text-[#5d4a3c]">
                 Choose a time that works for you. After booking, you’ll receive
-                a confirmation email with next steps and a short questionnaire
-                so we can make the most of your session.
+                a confirmation email.
               </p>
 
               <a
