@@ -55,6 +55,7 @@ export default function ContactPage() {
     if (res.ok) {
       setSubmitted(true);
       form.reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       alert("Something went wrong — please try again.");
     }
