@@ -11,6 +11,7 @@ const abhaya = Abhaya_Libre({
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+
   const startedAt = useRef(Date.now());
   const honeyRef = useRef(null);
 
@@ -18,22 +19,45 @@ export default function ContactPage() {
     startedAt.current = Date.now();
   }, []);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
+    e.preventDefault();
+
     // Honeypot check
     const honeyFilled =
       honeyRef.current && honeyRef.current.value.trim().length > 0;
 
-    // Human-time check (at least 3s on page)
+    // Timing check (3 seconds)
     const tooFast = Date.now() - startedAt.current < 3000;
 
     if (honeyFilled || tooFast) {
-      e.preventDefault();
       alert("Your message could not be sent. Please try again.");
       return;
     }
 
-    // Let the browser submit to FormSubmit.co
-    setSubmitted(true);
+    // Collect form data manually
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      referral: form.referral.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    // Send to your Brevo API route
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      setSubmitted(true);
+      form.reset();
+    } else {
+      alert("Something went wrong — please try again.");
+    }
   }
 
   return (
@@ -42,11 +66,13 @@ export default function ContactPage() {
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#b5937b]">
           Contact
         </p>
+
         <h1
           className={`${abhaya.className} mt-2 text-4xl md:text-5xl font-semibold tracking-tight text-[#2b211c]`}
         >
           Get in touch with Janelle
         </h1>
+
         <p className="mt-4 text-sm leading-relaxed text-[#5d4a3c]">
           Have a question about working together, functional medicine, or
           scheduling a session? Send a message below and Janelle will get back
@@ -57,8 +83,8 @@ export default function ContactPage() {
       <section className="mt-8 rounded-3xl border border-[#e5d5c9] bg-[#fff9f4] p-6 md:p-8">
         {submitted ? (
           <p className="text-sm text-emerald-700">
-            Thank you for reaching out — your message is on its way. If you
-            don&apos;t hear back within a few days, you can also email{" "}
+            Thank you for reaching out — your message is on its way! If you
+            don&apos;t hear back within a few days, you may also email{" "}
             <a
               href="mailto:janelle@intentionalwellness.care"
               className="underline"
@@ -68,34 +94,15 @@ export default function ContactPage() {
             .
           </p>
         ) : (
-          <form
-            className="space-y-6"
-            onSubmit={handleSubmit}
-            action="https://formsubmit.co/janelle@intentionalwellness.care"
-            method="POST"
-          >
-            {/* FormSubmit options */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New website contact from Intentional Wellness"
-            />
-            {/* Optional redirect after submit:
-            <input
-              type="hidden"
-              name="_next"
-              value="https://intentionalwellness.care/thank-you"
-            />
-            */}
-
-            {/* Honeypot: visually hidden but visible to bots */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            {/* Honeypot */}
             <div className="sr-only" aria-hidden="true">
               <label>
                 Do not fill this out
                 <input
                   ref={honeyRef}
                   type="text"
-                  name="_honey"
+                  name="honey"
                   tabIndex={-1}
                   autoComplete="off"
                 />
@@ -136,7 +143,7 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Phone (optional) */}
+            {/* Phone */}
             <div>
               <label
                 htmlFor="phone"
@@ -152,7 +159,7 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* How did you hear about us */}
+            {/* Referral */}
             <div>
               <label
                 htmlFor="referral"
@@ -163,8 +170,8 @@ export default function ContactPage() {
               <select
                 id="referral"
                 name="referral"
-                className="mt-1 w-full rounded-xl border border-[#e5d5c9] bg-white px-3 py-2 text-sm text-[#2b211c] shadow-sm focus:border-[#b5937b] focus:outline-none focus:ring-1 focus:ring-[#b5937b]"
                 defaultValue=""
+                className="mt-1 w-full rounded-xl border border-[#e5d5c9] bg-white px-3 py-2 text-sm text-[#2b211c] shadow-sm focus:border-[#b5937b] focus:outline-none focus:ring-1 focus:ring-[#b5937b]"
               >
                 <option value="" disabled>
                   Please select…
@@ -178,7 +185,7 @@ export default function ContactPage() {
               </select>
             </div>
 
-            {/* Subject / Type of support */}
+            {/* Subject */}
             <div>
               <label
                 htmlFor="subject"
@@ -212,7 +219,7 @@ export default function ContactPage() {
               />
             </div>
 
-            {/* Optional: consent line */}
+            {/* Disclaimer */}
             <p className="text-[11px] leading-relaxed text-[#8a7565]">
               Please avoid sharing highly sensitive medical details in this
               form. Janelle will follow up directly to discuss your needs and
