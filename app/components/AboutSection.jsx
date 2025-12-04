@@ -21,7 +21,7 @@ export default function AboutSection() {
           <h3
             className={`${abhaya.className} mt-2 text-3xl font-semibold tracking-tight text-[#2b211c]`}
           >
-            Meet Janelle Lauersdorf, BSN, RN
+            Meet Janelle Lauersdorf BSN, RN
           </h3>
 
           <p className="mt-3 text-sm leading-relaxed text-[#5d4a3c]">

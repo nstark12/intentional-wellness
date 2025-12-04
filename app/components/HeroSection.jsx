@@ -144,6 +144,9 @@ export default function HeroSection() {
               “My goal is to make you feel seen, supported, and empowered in
               every step of your wellness journey.”
             </p>
+            <p className="mt-5 text-xs font-medium text-[#5d4a3c]">
+              — Janelle Lauersdorf BSN, RN
+            </p>
             <div className="mt-6 border-t border-[#e5d5c9] pt-4 text-xs text-[#7a6250]">
               <p>Now welcoming new clients for virtual and local sessions.</p>
             </div>

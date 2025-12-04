@@ -42,7 +42,7 @@ export default function PhilosophySection() {
                   lasting change comes from intentional action.
                 </span>{" "}
                 True wellness requires commitment, consistency, courage, and
-                desire, and while the journey is not always easy, the
+                desire, and while the journey is not always easy... the
                 transformation that follows is deeply meaningful.
               </p>
 
@@ -84,7 +84,7 @@ export default function PhilosophySection() {
               </p>
 
               <p className="mt-5 text-xs font-medium text-[#5d4a3c]">
-                — Janelle Lauersdorf, BSN, RN
+                — Janelle Lauersdorf BSN, RN
               </p>
             </aside>
           </div>
